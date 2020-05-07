@@ -19,7 +19,7 @@ for ((i=0;i<$arrayLength;i++))
 do
   for ((j=i+1;j<$arrayLength;j++))
   do
-    if [ ${result[i]} -gt ${result[j]} ];
+    if [ ${result[i]} -lt ${result[j]} ];
     then
                 temp=${result[i]};
                 result[$i]=${result[j]};
@@ -28,4 +28,4 @@ do
         done
 done
 echo ${result[@]};
-echo "Ascending Order= "${result[@]}
+echo "descending Order= "${result[@]}
