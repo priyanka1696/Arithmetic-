@@ -29,3 +29,19 @@ do
 done
 echo ${result[@]};
 echo "descending Order= "${result[@]}
+
+for ((i=0;i<$arrayLength;i++))
+do
+  for ((j=i+1;j<$arrayLength;j++))
+  do
+    if [ ${result[i]} -gt ${result[j]} ];
+    then
+                temp=${result[i]};
+                result[$i]=${result[j]};
+                result[$j]=$temp;
+    fi
+        done
+done
+echo ${result[@]};
+echo "Ascending Order= "${result[@]}
+
